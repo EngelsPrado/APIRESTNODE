@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 
 app.use(require('./routes/usuario'))
  
-const uri = "mongodb+srv://engels:amores@cluster0-fqrop.mongodb.net/test?retryWrites=true&w=majority";
+const uri = process.env.MONGO_URI
 mongoose.connect(uri,(err,res)=>{
 
    if (err) throw err
