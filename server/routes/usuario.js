@@ -4,9 +4,15 @@ const app = express()
 const bcrypt=require('bcrypt')
 const _=require('underscore')
 const Usuario=require('../models/usuario')
-
-app.get('/usuario', function (req, res) {
+const {verificaToken,verificaRol}=require('../middlewares/autenticacion')
+app.get('/usuario', verificaToken,function (req, res) {
     
+    /*
+   return res.json({
+     usuario:req.usuario
+   })
+*/
+
 
     let desde=req.query.desde || 0
     desde=Number(desde)
@@ -42,7 +48,7 @@ app.get('/usuario', function (req, res) {
    
   
   //Nuevo registros
-  app.post('/usuario', function (req, res) {
+  app.post('/usuario', [verificaToken,verificaRol],function (req, res) {
   
     let body=req.body
   
@@ -77,7 +83,7 @@ app.get('/usuario', function (req, res) {
   })
    
   //actualizar
-  app.put('/usuario/:id', function (req, res) {
+  app.put('/usuario/:id', [verificaToken,verificaRol],function (req, res) {
   
   
     let id=req.params.id
@@ -105,7 +111,7 @@ app.get('/usuario', function (req, res) {
    
   })
    
-  app.delete('/usuario/:id', function (req, res) {
+  app.delete('/usuario/:id', [verificaToken,verificaRol],function (req, res) {
    
         
        let id=req.params.id
