@@ -15,7 +15,7 @@ process.env.MONGO_URI=process.env.MONGO_URI || "mongodb+srv://engels:amores@clus
 
 //Vencimiento del token
 
-process.env.CADUCIDAD_TOKEN=60*60*24
+process.env.CADUCIDAD_TOKEN=60*60*24*31
 
 
 //SEED de autentificacion
