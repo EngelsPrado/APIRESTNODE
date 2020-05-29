@@ -82,7 +82,7 @@ async function verify(token) {
         google:true
     }
   }
-  verify().catch(console.error);
+
 
 
 app.post('/google', async (req,res)=>{
