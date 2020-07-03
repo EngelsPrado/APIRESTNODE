@@ -153,7 +153,7 @@ app.post('/google', async (req,res)=>{
             },process.env.SEED_TOKEN,{expiresIn:process.env.CADUCIDAD_TOKEN})
     
 
-
+            
             return res.json({
                 ok:true,
                 usuario:usuarioBD,
