@@ -4,6 +4,7 @@ require('./config/config')
 const express = require('express')
 const mongoose = require('mongoose');
 const path=require('path')
+<<<<<<< HEAD
 const cors = require("cors");
 
 
@@ -13,6 +14,12 @@ var corsOptions = {
  };
  
  app.use(cors(corsOptions));
+=======
+
+
+
+const app = express()
+>>>>>>> 8c4ca9bf318f47034656429570cabee570e97b57
 const bodyParser = require('body-parser')
 
 
