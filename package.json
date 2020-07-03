@@ -12,10 +12,7 @@
   "dependencies": {
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
-<<<<<<< HEAD
     "cors": "^2.8.5",
-=======
->>>>>>> 8c4ca9bf318f47034656429570cabee570e97b57
     "express": "^4.17.1",
     "express-fileupload": "^1.1.7-alpha.3",
     "google-auth-library": "^6.0.0",
